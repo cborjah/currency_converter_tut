@@ -1,17 +1,11 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+import Home from './screens/Home';
+
+// use build when creating variables
+EStyleSheet.build({
+  $primaryBlue: '#4F6D7A',
 });
 
-const App = () => (
-  <View style={styles.container}>
-    <Text>Let's Build a Currency Converter!</Text>
-  </View>
-  );
+export default () => <Home />;
