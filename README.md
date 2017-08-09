@@ -18,3 +18,6 @@ Use resizeMode: "contain", in order to preserve aspect ratio.
 Ex: <Image resizeMode: "contain" />
 
 Using outline: 1 in your EStyleSheet.build, is good way of checking how the components are laid out.
+
+Use KeyboardAvoidingView from the react native library to prevent the keyboard
+from blocking components.

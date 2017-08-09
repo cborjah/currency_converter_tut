@@ -11,11 +11,11 @@ export default EStyleSheet.create({
     top: 0,
     '@media ios': {
       paddingTop: 20,
-    }
+    },
     '@media android': {
       // currentHeight is only available on Android
       paddingTop: StatusBar.currentHeight,
-    }
+    },
   },
   button: {
     // Aligns button to the right of its flex container
