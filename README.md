@@ -16,3 +16,5 @@ For require to work with static image resources (folder), restart the packager.
 
 Use resizeMode: "contain", in order to preserve aspect ratio.
 Ex: <Image resizeMode: "contain" />
+
+Using outline: 1 in your EStyleSheet.build, is good way of checking how the components are laid out.
