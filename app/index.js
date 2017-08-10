@@ -3,6 +3,7 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 
 import Home from './screens/Home';
 import CurrencyList from './screens/CurrencyList';
+import Options from './screens/Options';
 
 // use build for creating global variables
 EStyleSheet.build({
@@ -17,4 +18,4 @@ EStyleSheet.build({
   // outline: 1,
 });
 
-export default () => <CurrencyList />;
+export default () => <Options />;

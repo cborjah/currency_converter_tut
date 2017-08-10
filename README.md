@@ -21,3 +21,6 @@ Using outline: 1 in your EStyleSheet.build, is good way of checking how the comp
 
 Use KeyboardAvoidingView from the react native library to prevent the keyboard
 from blocking components.
+
+barStyle set to default gives it a dark color
+<StatusBar translucent={false} barStyle="default" />
