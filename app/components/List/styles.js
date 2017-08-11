@@ -34,5 +34,5 @@ export default EStyleSheet.create({
   },
   checkIcon: {
     width: 18,
-  }
+  },
 });

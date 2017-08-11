@@ -24,3 +24,48 @@ from blocking components.
 
 barStyle set to default gives it a dark color, translucent is for Android
 <StatusBar translucent={false} barStyle="default" />
+
+Setting up ESLint
+
+$ npm install --save-dev babel-eslint@7.2.3 eslint@3.19.0 eslint-config-airbnb@14.1.0 eslint-plugin-import@2.2.0 eslint-plugin-jsx-a11y@4.0.0 eslint-plugin-react@6.10.3
+
+// .eslintrc.json
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/forbid-prop-types": [
+      0
+    ],
+    "react/require-default-props": [
+      0
+    ],
+    "global-require": [
+      0
+    ]
+  }
+}
+
+OR
+
+$ npm i --save-dev eslint
+$ eslint --init
+Restart Text Editor
+
