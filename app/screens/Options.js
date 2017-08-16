@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { ScrollView, StatusBar, Platform } from 'react-native';
 import { ListItem, Separator } from '../components/List';
 
@@ -11,8 +11,12 @@ const ICON_COLOR = '#868686';
 const ICON_SIZE = 23;
 
 class Options extends Component {
+  static propTypes = {
+    navigation: PropTypes.object,
+  }
+
   handlePressThemes = () => {
-    console.log('press themes');
+    this.props.navigation.navigate('Themes');
   };
 
   handlePressSite = () => {
@@ -27,7 +31,7 @@ class Options extends Component {
           text="Themes"
           onPress={this.handlePressThemes}
           // customIcon={
-          //   <Ionicons name={`${ICON_PREFIX}-arrow-forward`} size={ICON_SIZE} color={ICON_COLOR} />
+            // <Ionicons name={`${ICON_PREFIX}-arrow-forward`} size={ICON_SIZE} color={ICON_COLOR} />
           // }
         />
         <Separator />
