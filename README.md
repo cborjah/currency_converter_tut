@@ -65,7 +65,32 @@ $ npm install --save-dev babel-eslint@7.2.3 eslint@3.19.0 eslint-config-airbnb@1
 
 OR
 
-$ npm i --save-dev eslint
+$ npm i --save-dev eslint babel-eslint
+
+add to eslintrc.json the following
+
+  "parser": "babel-eslint",
+  "rules": {
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/forbid-prop-types": [
+      0
+    ],
+    "react/require-default-props": [
+      0
+    ],
+    "global-require": [
+      0
+    ]
+  }
+
 $ eslint --init
 Restart Text Editor
 

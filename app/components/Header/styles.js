@@ -1,5 +1,5 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import StatusBar from 'react-native';
+// import StatusBar from 'react-native';
 
 export default EStyleSheet.create({
   container: {
@@ -12,10 +12,11 @@ export default EStyleSheet.create({
     '@media ios': {
       paddingTop: 20,
     },
-    '@media android': {
+    // Navigator added this padding, no longer required
+    // '@media android': {
       // currentHeight is only available on Android
-      paddingTop: StatusBar.currentHeight,
-    },
+      // paddingTop: StatusBar.currentHeight,
+    // },
   },
   button: {
     // Aligns button to the right of its flex container
