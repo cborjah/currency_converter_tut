@@ -2,6 +2,7 @@ import React from 'react';
 import EStyleSheet from 'react-native-extended-stylesheet';
 
 import Navigator from './config/routes';
+import { AlertProvider } from './components/Alert';
 
 // use build for creating global variables
 EStyleSheet.build({
@@ -20,4 +21,4 @@ EStyleSheet.build({
   // outline: 1,
 });
 
-export default () => <Navigator />;
+export default () => <AlertProvider><Navigator /></AlertProvider>;

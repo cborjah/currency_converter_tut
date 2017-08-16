@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { ScrollView, StatusBar, Platform, Linking } from 'react-native';
 import { ListItem, Separator } from '../components/List';
+import { connectAlert } from '../components/Alert';
 
 // Don't have expo included in this project
 // import { Ionicons } from '@expo/vector-icons';
@@ -13,6 +14,7 @@ const ICON_SIZE = 23;
 class Options extends Component {
   static propTypes = {
     navigation: PropTypes.object,
+    alertWithType: PropTypes.func,
   }
 
   handlePressThemes = () => {
@@ -24,7 +26,9 @@ class Options extends Component {
     Uses React Native's 'Linking' API to open up links with the browser from
     WITHIN the app. It returns a promise to catch for any errors.
     */
-    Linking.openURL('http://fixer.io').catch(() => alert('An error occured'));
+    Linking.openURL('http://fixer.io').catch(() =>
+      this.props.alertWithType('error', 'Sorry!', "Fixer.io can't be opened right now"),
+    );
   };
 
   render() {
@@ -50,4 +54,4 @@ class Options extends Component {
   }
 }
 
-export default Options;
+export default connectAlert(Options);
