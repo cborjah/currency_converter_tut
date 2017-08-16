@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { ScrollView, StatusBar, Platform } from 'react-native';
+import { ScrollView, StatusBar, Platform, Linking } from 'react-native';
 import { ListItem, Separator } from '../components/List';
 
 // Don't have expo included in this project
@@ -20,7 +20,11 @@ class Options extends Component {
   };
 
   handlePressSite = () => {
-    console.log('press site');
+    /*
+    Uses React Native's 'Linking' API to open up links with the browser from
+    WITHIN the app. It returns a promise to catch for any errors.
+    */
+    Linking.openURL('http://fixer.io').catch(() => alert('An error occured'));
   };
 
   render() {
